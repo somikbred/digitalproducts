@@ -1,0 +1,216 @@
+@import 'bootstrap/bootstrap';
+@import 'variables';
+// @import 'normalize';
+@import 'mixins';
+@import 'slider';
+@import 'slick';
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 14px;
+}
+
+body {
+    min-height: 100%;
+    @include text($text-color-light , $text-font, 1.4rem, 500);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 80%;
+}
+
+section {
+    min-height: 100vh;
+}
+
+//HEADER
+
+//HOME-SECTION 
+.home-section {
+    background-image: linear-gradient(rgba(159,154,207,.4)), url(../img/home-page.png);
+}
+
+.nav-link {
+    color: #fff;
+}
+
+//ABOUT-SECTION 
+.about-section {
+    background-color: $bg-beige;
+}
+
+.about__img {
+    height: 550px;
+    min-width: 320px;
+    background-image: linear-gradient(rgba(159,154,207, .4)), url(../img/aboutUs.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.about__icon {
+    width: 50px;
+    height: 50px;
+}
+
+.about__article {
+    color: $text-color-d;
+    font-size: 1.4rem;
+}
+
+.about__link {
+    color: $text-color-d;
+    @include hover() {
+      color: $text-color-d;
+      font-weight: bold;
+      text-decoration: none;
+    }   
+}
+
+//SERVICES-SECTION
+.services-section {
+    background-color: $bg-beige;
+}
+
+.bg-braun {
+    background-color: $bg-braun;
+}
+
+.our-services {
+    background-image:linear-gradient(rgba(159,154,207,.4)), url(../img/services.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.grid--img {
+    width: 50px;
+    height: 50px;
+}
+
+.grid--title, 
+.grid--text {
+    color: $text-color-d;
+}
+
+//WORKS-SECTION
+.works-section {
+    height: 1000px;
+    background-image:linear-gradient(rgba(159,154,207,.95)), url(../img/works-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.works-svg {
+    width: 60px;
+    height: 60px; 
+}
+
+.work__link {
+    color: $white;
+    @include hover() {
+      color: $text-color-d;
+      font-weight: bold;
+      text-decoration: none;
+    }      
+}
+
+//TEAM-SECTION 
+.team-section {
+    background-color: $bg-beige;
+    position: relative;
+}
+
+.team-title {
+    color: $text-color-d;
+}
+
+.team-img {
+    width: 240px;
+    border: 10px solid $bg-beige;    
+    position: absolute;
+    top: -25%;
+    left: 15%;
+}
+
+.person-info {
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    width: 350px;
+    background-color: $white;
+    position: relative;
+    margin-left: 30px;
+
+}
+
+.person-title{
+    color: $primary;
+}
+
+.name-career {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+}
+
+.person-career{
+    color: $text-color-d;
+}
+
+.team__link {
+    background: $primary;
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+}
+
+.team-svg {
+    width: 60px;
+    height: 60px;
+}
+
+
+//CONTACT-SECTION 
+.contact-section {
+    background-image: linear-gradient(rgba(159,154,207,.4)), url(../img/map.png);
+    height: 900px;
+    position: relative;
+}
+
+//FOOTER 
+footer {
+    padding: 0 5%;
+    height: 185px;
+    background-color: $primary;    
+}
+
+.footer__reserved {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.link {
+    &__item {
+        display: inline-block;
+        margin-left: 20px;
+        text-decoration: none;
+        color: $brand-color;
+        font-size: 1.4rem;
+        border: 1px solid $bg-beige;
+        border-radius: 50%;
+        background-color: $bg-beige;
+        width: 35px;
+        text-align: center;
+    }
+}
